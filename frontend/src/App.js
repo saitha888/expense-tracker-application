@@ -1,9 +1,14 @@
-
+import { styled } from "styled-components";
+import bg from "./img/bg.png"
+import { MainLayout } from "./styles/Layouts";
+import Navigation from './Components/Navigation/Navigation'
 
 function App() {
   return (
-    <AppStyled className="App">
-
+    <AppStyled bg = {bg} className="App">
+      <MainLayout>
+        <Navigation />
+      </MainLayout>
     </AppStyled>
 
   );
@@ -11,8 +16,8 @@ function App() {
 
 const AppStyled = styled.div`
   height: 100vh;
-  background-image: 
-
+  background-image: url(${props => props.bg});
+  position: relative;
 `;
 
 export default App;
